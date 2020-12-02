@@ -22,6 +22,15 @@ public class User implements UserDetails {
 
     private Boolean active;
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    private String address;
 
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
