@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Edit User</title>
+</head>
+<body>
+Add New User
+{{#message}}
+    {{message}}
+{{/message}}
+<form action="/edit" method="post">
+    <div><label> First Name : <input type="text" name="firstName" value="{{firstName}}"/> </label></div>
+    <div><label> Second Name: <input type="text" name="secondName" value="{{secondName}}"/> </label></div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <div><input type="submit" value="Save"/></div>
+</form>
+</body>
+</html>
